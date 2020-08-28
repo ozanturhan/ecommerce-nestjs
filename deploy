@@ -1,0 +1,10 @@
+ssh username@localhost <<EOF
+ rm -rf ~/ecommerce_backend
+ cp /var/lib/jenkins/workspace/ecommerce_backend ~ -R
+ cd ~/backend-api
+ pm2 restart all
+ exit
+EOF
+
+
+
